@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>匡威</title>
+	<meta name="viewport" content="width=divice-width,initial-scale=1.0,minimum-scale=1.0,maximum=1.0,user-scalable=no" />
+	<link rel='icon' href='./images/icon.ico ' type='image/x-ico' /> 
+	<link rel="stylesheet" href="./css/normalize.css" type="text/css" />
+	<link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css" />
+	<link rel="stylesheet" href="./css/main.css" type="text/css" media="screen and (min-width:1146px)" />
+	<link rel="stylesheet" href="./css/ipad.css" type="text/css"  
+	media="screen and (min-width:706px) and (max-width:1145px)"/>
+	<link rel="stylesheet" href="./css/iphone.css" type="text/css" media="screen and (max-width:705px)"/>
+	<script src="./js/jquery-1.7.2.js"></script>
+	<script src="./js/banner.js"></script>
+	<script src="./js/main.js"></script>
+
+</head>
+<body>
+	<!--外部容器开始-->
+	<div id="container">
+		<!--头部开始-->
+			<header>
+				<!--导航栏开始-->
+				<nav>
+					<div class="nav-content">
+						<div class="nav-left" id="index"></div>
+						<div class="nav-right">
+							<ul>
+								<li><a href="javascript:;" id="login-a" data-index="0">登录</a>/<a href="javascript:;" id="register">注册</a></li>
+								<li id="man"></li>
+								<li></li>
+								<li></li>
+								<li id="search" data-index="0"></li>
+								<li id="help"></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<!--导航栏结束-->
+
+				<!--登陆、注册界面开始-->
+				<section class="login">
+					<!-- 登陆界面开始 -->
+					<div class="login-div">
+						<dl>
+							<dt>还未注册?</dt>
+							<dd id="dd_register">注册账号</dd>
+						</dl>
+						<dl>
+							<dt>您可以直接登录</dt>
+							<dd>
+								<i class="fa fa-weibo fa-2x" aria-hidden="true"></i>
+								<i class="fa fa-tencent-weibo fa-2x" aria-hidden="true"></i>
+								<i class="fa fa-renren fa-2x" aria-hidden="true"></i>
+								<i class="fa fa-weixin fa-2x" aria-hidden="true"></i>
+								<i class="fa fa-qq fa-2x" aria-hidden="true"></i>
+							</dd>
+								
+						</dl>
+
+						<dl>
+							<dt>已经成为会员？</dt>
+							<dd id="login_check">
+								<input type="text" name="username"><span>邮箱/手机</span>
+
+								<!-- maxlength="12"限制输入的字符最多为12个 -->
+								<input type="password" name="pass" maxlength="12"><span>账户密码</span>
+								<input type="text" name="check"><span>请输入验证码</span> 
+								<img src="./images/getImage.json" alt="error">
+							</dd>
+							<dd><a href="#">换一张</a></dd>
+							<dd>一旦登录，即表明你同意匡威的<a href="#">法律声明</a>和<a href="#">使用规则</a></dd>
+							<dd><button type="submit" form="reg">登录</button></dd>
+							<dd class="no-check check">
+								<a href="javascript:;" id="hold_login">保持登录状态</a>
+								<a href="javascript:;">忘记密码？</a>
+							</dd>
+						</dl>
+
+					</div>
+					<!-- 登陆界面结束 -->
+					
+					<!--注册界面开始-->
+					<div class="register">
+						
+						<dl>
+							<dd>
+								<ul>
+									<li>
+										手机号码
+										<b style="color:red"> &lowast;</b>
+										<input type="text" name="phonenumber" id = "phnum" placeholder="请入手机号码！">
+										<!-- <span style="color:red;font-size:12px;">请输入11位有效中国手机号码！</span> -->
+									</li>
+									<li>
+										邮箱
+										<b style="color:red"> &lowast;</b>
+										<input type="text" id="reg_email" name="email" placeholder="请入电子邮箱地址！">
+									</li>
+									<li id="sex">
+										性别
+										<b style="color:red"> &lowast;</b>
+										<a href="javascript:;" class="sex">男的</a>
+										<a href="javascript:;" class="sex">女的</a>
+										
+									</li>
+								</ul>
+							</dd>
+							<dd>
+								<ul>
+									<li>
+										输入密码
+										<b style="color:red"> &lowast;</b>
+										<input type="password" id="pass1" name="phonenumber" maxlength="12" placeholder="请输入密码！">
+									</li>
+									<li>
+										确认密码
+										<b style="color:red"> &lowast;</b>
+										<input type="password" id="pass2" name="phonenumber" maxlength="12" placeholder="请再次输入密码！">
+									</li>
+									<li>
+										生日（年-月-日）
+										<b style="color:red" class="bir"> &lowast;</b>
+
+											<select id="birthday-year">
+
+												<option value="1954">1954</option>
+												<option value="1955">1955</option>
+												<option value="1956">1956</option>
+												<option value="1957">1957</option>
+												<option value="1958">1958</option>
+												<option value="1959">1959</option>
+												<option value="1960">1960</option>
+												<option value="1961">1961</option>
+												<option value="1962">1962</option>
+												<option value="1963">1963</option>
+												<option value="1964">1964</option>
+												<option value="1965">1965</option>
+												<option value="1966">1966</option>
+												<option value="1967">1967</option>
+												<option value="1968">1968</option>
+												<option value="1969">1969</option>
+												<option value="1970">1970</option>
+												<option value="1971">1971</option>
+												<option value="1972">1972</option>
+												<option value="1973">1973</option>
+												<option value="1974">1974</option>
+												<option value="1975">1975</option>
+												<option value="1976">1976</option>
+												<option value="1977">1977</option>
+												<option value="1978">1978</option>
+												<option value="1979">1979</option>
+												<option value="1980">1980</option>
+												<option value="1981">1981</option>
+												<option value="1982">1982</option>
+												<option value="1983">1983</option>
+												<option value="1984">1984</option>
+												<option value="1985">1985</option>
+												<option value="1986">1986</option>
+												<option value="1987">1987</option>
+												<option value="1988">1988</option>
+												<option value="1989">1989</option>
+												<option value="1990">1990</option>
+												<option value="1991">1991</option>
+												<option value="1992">1992</option>
+												<option value="1993">1993</option>
+												<option value="1994">1994</option>
+												<option value="1995">1995</option>
+												<option value="1996">1996</option>
+												<option value="1997">1997</option>
+												<option value="1998">1998</option>
+												<option value="1999">1999</option>
+												<option value="2000">2000</option>
+												<option value="2001">2001</option>
+												<option value="2002">2002</option>
+												<option value="2003">2003</option>
+												<option value="2004">2004</option>
+												<option value="2005">2005</option>
+												<option value="2006">2006</option>
+												<option value="2007">2007</option>
+												<option value="2008">2008</option>
+												<option value="2009">2009</option>
+												<option value="2010">2010</option>
+												<option value="2011">2011</option>
+												<option value="2012">2012</option>
+												<option value="2013">2013</option>
+												<option value="2014">2014</option>
+												<option value="2015">2015</option>
+												<option value="2016">2016</option>
+											</select>
+											
+
+										<select id="birthday-month">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+										</select>
+										
+										<select id="birthday-date">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+											<option value="21">21</option>
+											<option value="22">22</option>
+											<option value="23">23</option>
+											<option value="24">24</option>
+											<option value="25">25</option>
+											<option value="26">26</option>
+											<option value="27">27</option>
+											<option value="28">28</option>
+											<option value="29">29</option>
+											<option value="30">30</option>
+											<option value="31">31</option>
+										</select>
+										
+									</li>
+								</ul>
+							</dd>
+							<dd>
+								<ul id="ul_idc">
+									<li >
+										验证码
+										<b style="color:red"> &lowast;</b>
+										<input type="text" class="idc" placeholder="输入验证码">
+										<img src="./images/getImage (1).json" alt="error">
+										<a href="#">换一张</a>
+									</li>
+									<li>
+										短信验证码
+										<b style="color:red"> &lowast;</b>
+										<input type="text" class="idc">
+										<span>发送短信验证码</span>
+									</li>
+									<li>
+										一旦创建账户，即表明你同意匡威的<a href="#" class="last_li">法律声明</a>和<a href="#" class="last_li">使用规则</a>
+										<!-- 与id为reg的表单连接 -->
+										<button form="reg">注册</button>
+									</li>
+
+								</ul>
+							</dd>
+						</dl>
+						
+					</div>
+					<!-- 注册界面结束 -->
+				</section>
+				<!--登陆、注册界面结束-->
+
+				<section class="search">
+					<div class="search_content">
+						<input type="text" name="search" id="want_search">
+						<span>想找什么随便搜</span>
+						<aside>
+							<div class="search_button"></div>
+							<div class="search_button" id="close_search"></div>
+						</aside>
+					</div>
+				</section>
+
+				<!--选项开始-->
+				<section id="myOption">
+					<ul id="nav-choose">
+						<li class="underline" data-index="0" data-flag=0>
+							<a href="#">男的<i></i></a>
+						</li>
+						<li class="underline" data-index="1" data-flag=0>
+							<a href="#">女的<i></i></a>
+						</li>
+						<li class="underline" data-index="2" data-flag=0>
+							<a href="#">儿童<i></i></a>
+						</li>
+						<li>
+							<a href="#">电子杂志<i></i></a>
+						</li>
+						<li>
+							<a href="#">店铺分布<i></i></a>
+						</li>
+					<!--选项结束-->
+					</ul>
+
+					<!-- 男的 -->
+					<aside>
+						<!--上-->
+						<ul>
+							<li>
+								
+								<a href="./chuck2.html"><img src="./images/man/M_B_FTW.jpg" alt="man_photo"><span>踩的</span></a>
+							</li>
+							<li>
+								
+								<a href="./chuck2.html"><img src="./images/man/M_B_APP.jpg" alt="man_photo"><span>穿的</span></a>
+							</li>
+							<li>
+								
+								<a href="./chuck2.html"><img src="./images/man/M_B_ACC.jpg" alt="man_photo"><span>戴的</span></a>
+								</li>
+							<li>
+								
+								<a href="./chuck2.html"><img src="./images/man/new_icon.jpg" alt="man_photo"><span>新产品</span></a>
+							</li>
+							<li>
+								
+								<a href="./chuck2.html"><img src="./images/man/discount_icon.jpg" alt="man_photo"><span>优惠</span></a>
+							</li>
+						</ul>
+						
+						<div class="hr"></div>
+
+						<!-- 下 -->
+						<ul>
+							<li>
+								
+								<a href="./chuck2.html"><img src="./images/man/_drop_down_men_06_30.jpg" alt="man_photo"><span>经典款</span></a>
+							</li>
+							<li>
+								
+								<a href="./chuck2.html"><img src="./images/man/M_B_CT.jpg" alt="man_photo"><span>ALL STAR</span></a>
+							</li>
+							<li>
+								
+								<a href="./chuck2.html"><img src="./images/man/M_B_CONS.jpg" alt="man_photo"><span>CONS</span></a>
+								</li>
+							<li>
+								
+								<a href="./chuck2.html"><img src="./images/man/M_B_JP.jpg" alt="man_photo"><span>JACK PURCELL</span></a>
+							</li>
+							<li>
+								
+								<a href="./chuck2.html"><img src="./images/man/_drop_down_chuck2_06_30.jpg" alt="man_photo"><span>CHUCK II</span></a>
+							</li>
+						</ul>
+					</aside>
+
+					<!--女的-->
+					<aside>
+						<!--上-->
+						<ul>
+							<li>
+								
+								<a href="#"><img src="./images/woman/W_B_FTW.jpg" alt="man_photo"><span>踩的</span></a>
+							</li>
+							<li>
+								
+								<a href="#"><img src="./images/woman/W_B_APP.jpg" alt="man_photo"><span>穿的</span></a>
+							</li>
+							<li>
+								
+								<a href="#"><img src="./images/woman/W_B_ACC.jpg" alt="man_photo"><span>戴的</span></a>
+								</li>
+							<li>
+								
+								<a href="#"><img src="./images/man/new_icon.jpg" alt="man_photo"><span>新产品</span></a>
+							</li>
+							<li>
+								
+								<a href="#"><img src="./images/man/discount_icon.jpg" alt="man_photo"><span>优惠</span></a>
+							</li>
+						</ul>
+						
+						<div class="hr"></div>
+
+						<!-- 下 -->
+						<ul>
+							<li>
+								
+								<a href="#"><img src="./images/woman/_drop_down_men_06_30.jpg" alt="man_photo"><span>经典款</span></a>
+							</li>
+							<li>
+								
+								<a href="#"><img src="./images/woman/W_B_CT.jpg" alt="man_photo"><span>ALL STAR</span></a>
+							</li>
+							<li>
+								
+								<a href="#"><img src="./images/woman/W_B_CONS.jpg" alt="man_photo"><span>CONS</span></a>
+								</li>
+							<li>
+								
+								<a href="#"><img src="./images/woman/W_B_JP.jpg" alt="man_photo"><span>JACK PURCELL</span></a>
+							</li>
+							<li>
+								
+								<a href="#">
+									<img src="./images/woman/_drop_down_chuck2_06_30.jpg" alt="man_photo">
+									<span>CHUCK II</span>
+								</a>
+							</li>
+						</ul>
+					</aside>
+
+
+					<!-- 儿童 -->
+					<aside>
+						<!--上-->
+						<ul>
+							<li>
+								
+								<a href="#"><img src="./images/woman/W_B_FTW.jpg" alt="man_photo"><span>踩的</span></a>
+							</li>
+							
+							<li>
+								<a href="#">
+									<img src="./images/man/new_icon.jpg" alt="man_photo">
+									<span>新产品</span>
+								</a>
+							</li>
+							<li>
+								
+								<a href="#">
+									<img src="./images/man/discount_icon.jpg" alt="man_photo">
+									<span>优惠</span>
+								</a>
+							</li>
+						</ul>
+						
+						<div class="hr"></div>
+
+						<!-- 下 -->
+						<ul>
+							<li>
+								
+								<a href="#">
+									<img src="./images/woman/_drop_down_men_06_30.jpg" alt="man_photo">
+									<span>经典款</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="./images/woman/W_B_JP.jpg" alt="man_photo">
+									<span>JACK PURCELL</span>
+								</a>
+							</li>
+							<li>
+								
+								<a href="#">
+									<img src="./images/woman/_drop_down_chuck2_06_30.jpg" alt="man_photo">
+									<span>CHUCK II</span>
+								</a>
+							</li>
+						</ul>
+					</aside>
+				</section>
+			</header>
+		<!--头部结束-->
+
+		<!--主体内容开始-->
+		<main>
+			<!--区域一开始-->
+			<section class="main-one">
+				<div title="尊敬的顾客您好，我们店铺是不会泄露您的消费信息的，请放心。另外我们也不会要求获取、收集、使用任何与消费者金融消费类（如：信用卡）信息，如果接到以上信息电话，是属于诈骗电话，请勿相信，以防钱财损失。如您对订单有疑问，请联系在线客服。">
+					尊敬的顾客您好，我们店铺是不会泄露您的消费信息的，请放心。另外我们也不会要求获取、收集、使用任何与消费者金融消费类（如：信用卡）信息，如果接到以上信息电话，是属于诈骗电话，请勿相信，以防钱财损失。如您对订单有疑问，请联系在线客服。
+				</div>
+				
+					<div id="banner">
+						
+
+						<ul id="ul-banner">
+								<li style="opacity: 1"><img src="./images/0.jpg" alt="banner"></li>
+								<li><img src="./images/1.jpg" alt="banner"></li>
+								<li><img src="./images/2.jpg" alt="banner"></li>
+								<li><img src="./images/3.jpg" alt="banner"></li>
+								<li><img src="./images/4.jpg" alt="banner"></li>
+								<li><img src="./images/5.jpg" alt="banner"></li>
+								<li><img src="./images/6.jpg" alt="banner"></li>
+								
+						</ul>
+
+						<div id="prev"><span></span></div>
+						<div id="next"><span></span></div>
+
+						<ul id="banner_title">
+							<li data-index="0">Hiker x Missoni</li>
+							<li data-index="1">Nigel Cabourn</li>
+							<li data-index="2">无惧雨雪</li>
+							<li data-index="3">风格随我</li>
+							<li data-index="4">秋冬MA-1</li>
+							<li data-index="5">极简新经典</li>
+							<li data-index="6">摩登街头</li>
+						</ul>
+					</div>
+			</section>
+			<!--区域一结束-->
+
+			<!--区域二开始-->
+			<section class="main-two">
+				<fieldset>
+					<legend><h1>热卖单品</h1></legend>
+				</fieldset>
+
+				<ul>
+					<li data-index="0">
+						<a href="#">
+							<span>男的踩的</span>
+							<img src="./images/two/top_02_1203.jpg" alt="main-two-photo">
+						</a>
+						
+
+					</li>
+					<li data-index="1">
+						<a href="#">
+							<span>女的踩的</span>
+							<img src="./images/two//top_01_1203.jpg" alt="main-two-photo">
+						</a>
+
+						
+					</li>
+					<li data-index="2">
+						<a href="#">
+							<span>穿的</span>
+							<img src="./images/two/top_01_05.jpg" alt="main-two-photo">
+						</a>
+					</li>
+					<li data-index="3">
+						<a href="#">
+							<span>戴的</span>
+							<img src="./images/two/top_01_07.jpg" alt="main-two-photo">
+						</a>
+					</li>
+				</ul>
+				
+				<div class="myhr">
+					<canvas id="can" width="40" height="20">
+						
+					</canvas>
+				</div>
+
+				<!--男的踩的-->
+						<aside>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="./images/man/102329401_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/man/101010001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 369.00</span>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/man/150146C400_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck II Core经典帆布</a>
+									
+
+									<span>
+										<del>&yen; 519.00</del>
+										&yen; 416.00
+									</span>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/man/153532C001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck II 防溅水帆布鞋</a>
+									
+									<span>
+										<del>&yen; 569.00</del>
+										&yen;456.00
+									</span>
+								</li>
+							</ul>
+							<div class="mydotted"></div>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="./images/man/1Q698987_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/man/1Q699007_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/man/153533C001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck II 撞色帆布鞋</a>
+									
+									<span>
+										<del>￥539.00</del>
+										&yen; 432.00
+									</span>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/man/154159C008_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+							</ul>
+
+							<div class="lab">
+							查看所有男的踩的最新商品
+							<span class="line line_top"></span>
+							<span class="line line_bottom"></span>
+							<span class="line line_left"></span>
+							<span class="line line_right"></span>
+							</div>
+
+						</aside>
+
+				<!--女的踩的-->
+						<aside>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="./images/man/101000100_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/man/1Z588001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 369.00</span>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/man/150154C100_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck II Core经典帆布</a>
+									
+
+									<span>
+										<del>&yen; 519.00</del>
+										&yen; 416.00
+									</span>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/man/150145C600_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck II 防溅水帆布鞋</a>
+									
+									<span>
+										<del>&yen; 569.00</del>
+										&yen; 456.00
+									</span>
+								</li>
+							</ul>
+							<div class="mydotted"></div>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="./images/man/101509111_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/man/150148C100_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/man/153850C281_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck II 撞色帆布鞋</a>
+									
+									<span>
+										<del>￥539.00</del>
+										&yen; 432.00
+									</span>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/man/153544C049_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+							</ul>
+
+							<div class="lab">
+								查看所有女的踩的最新商品
+								<span class="line line_top"></span>
+								<span class="line line_bottom"></span>
+								<span class="line line_left"></span>
+								<span class="line line_right"></span>
+							</div>
+						</aside>
+
+				<!--穿的-->
+						<aside>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002151001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/woman/10003798001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 369.00</span>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002131607_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck II Core经典帆布</a>
+									
+
+									<span>
+										<del>&yen; 519.00</del>
+										&yen; 416.00
+									</span>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/woman/10000654001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck II 防溅水帆布鞋</a>
+									
+									<span>
+										<del>&yen; 569.00</del>
+										&yen; 456.00
+									</span>
+								</li>
+							</ul>
+							<div class="mydotted"></div>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002177461_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002866001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10001070003_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck II 撞色帆布鞋</a>
+									
+									<span>
+										<del>￥539.00</del>
+										&yen; 432.00
+									</span>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10003124001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+							</ul>
+
+							<div class="lab">
+								查看所有穿的最新商品
+								<span class="line line_top"></span>
+								<span class="line line_bottom"></span>
+								<span class="line line_left"></span>
+								<span class="line line_right"></span>
+							</div>
+						</aside>
+
+				<!--戴的-->
+						<aside>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002653410_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002976001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 369.00</span>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002974467_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck II Core经典帆布</a>
+									
+
+									<span>
+										<del>&yen; 519.00</del>
+										&yen; 416.00
+									</span>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002984607_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck II 防溅水帆布鞋</a>
+									
+									<span>
+										<del>&yen; 569.00</del>
+										&yen; 456.00
+									</span>
+								</li>
+							</ul>
+							<div class="mydotted"></div>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002992607_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10003006607_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&yen; 339.00</span>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002288467_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck II 撞色帆布鞋</a>
+									
+									<span>
+										<del>￥539.00</del>
+										&yen; 432.00
+									</span>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002263102_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck Taylor All Star<span>Core 常青款</span></a>
+									
+									<span>&#165; 339.00</span>
+								</li>
+							</ul>
+						
+						<div class="lab">
+							查看所有戴的最新商品
+							<span class="line line_top"></span>
+							<span class="line line_bottom"></span>
+							<span class="line line_left"></span>
+							<span class="line line_right"></span>
+						</div>
+						</aside>
+			</section>
+			<!--区域二结束-->
+
+			<!--区域三开始-->
+			<section class="main-three">
+				<fieldset>
+					<legend><h1>新品推荐</h1></legend>
+				</fieldset>
+
+				<aside>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="./images/woman/155357C031_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男的】Chuck II 摩登月亮印花<span style="color: transparent;">a</span></a>
+									
+									<span>&yen; 699.00</span>
+									<div class="circle"></div>
+									<div class="circle2"></div>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/woman/153830C450_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Chuck '70 <span>复古牛仔</span></a>
+									
+									<span>&yen; 699.00</span>
+									<div class="circle"></div>
+									<div class="circle2"></div>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/woman/154148C001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Jack Purcell Jack <span>牛皮革开口笑</span></a>
+									
+
+									<span>
+										&yen; 699.00
+									</span>
+									<div class="circle"></div>
+									<div class="circle2"></div>
+								</li>
+
+								<li>
+									<a href="#">
+										<img src="./images/woman/10003721414_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男的】Core Snap Baseball Set In Jacket <span>经典针织夹克</span></a>
+									
+									<span>
+										&yen; 459.00
+									</span>
+									<div class="circle"></div>
+									<div class="circle2"></div>
+								</li>
+							</ul>
+							<div class="mydotted"></div>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002177102_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男的】Core L/S Chuck Patch Tee <span>长袖T恤</span></a>
+									
+									<span>&yen; 199.00</span>
+									<div class="circle"></div>
+									<div class="circle2"></div>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002135001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男的】Core Rib Cuff Jogger <span>经典针织长裤</span></a>
+									
+									<span>&yen; 359.00</span>
+									<div class="circle"></div>
+									<div class="circle2"></div>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10003015607_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Core Crew Single Pack <span>基础长袜（1双）</span></a>
+									
+									<span>
+										&yen; 39.00
+									</span>
+									<div class="circle"></div>
+									<div class="circle2"></div>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10003007046_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Stripe Scarf <span>条纹围巾</span></a>
+									
+									<span>&yen; 169.00</span>
+									<div class="circle"></div>
+									<div class="circle2"></div>
+								</li>
+							</ul>
+
+							<div class="mydotted"></div>
+							<ul>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002979049_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男的】PU Embellished <span>双肩包</span></a>
+									
+									<span>&yen; 169.00</span>
+									<div class="circle"></div>
+									<div class="circle2"></div>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10002977001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男的】Chuck Plus Star Graphic <span>双肩包</span></span></a>
+									
+									<span>&yen; 169.00</span>
+									<div class="circle"></div>
+									<div class="circle2"></div>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/woman/154174C064_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男女同款】Cons Tre Star <span>撞色低帮</span></a>
+									
+									<span>
+										&yen; 439.00
+									</span>
+									<div class="circle"></div>
+									<div class="circle2"></div>
+								</li>
+								<li>
+									<a href="#">
+										<img src="./images/woman/10003093001_1B_NEW.png" alt="man_photo">
+										
+									</a>
+									<a href="#">【男的】Core L/S Chuck Patch Tee <span>长袖T恤</span></a>
+									
+									<span>&yen; 209.00</span>
+									<div class="circle"></div>
+									<div class="circle2"></div>
+								</li>
+							</ul>
+						</aside>
+			</section>
+			<!--区域三结束-->
+
+			<!--区域四开始-->
+			<section class="main-four">
+				<div>
+					<img src="./images/star.png" alt="">
+					<span>街头先型</span>
+				</div>
+
+				<dl>
+					<dd>
+						<a href="#">
+							<img src="./images/all-star-161101.jpg">
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<h1><span>秋</span><span>冬</span><span>经</span><span>典</span></h1>
+							<span>马丁系带户外休闲鞋，采用反绒面料增强了透气性。基础款帆布鞋的样式，鞋舌与鞋后跟均采用条纹印花设计，增添活泼感，释放青春正能量。弹性橡胶底，防滑耐磨，经久耐穿。</span>
+						</a>
+					</dd>
+					<dd>
+						查看更多
+						<span class="line line_top"></span>
+						<span class="line line_bottom"></span>
+						<span class="line line_left"></span>
+						<span class="line line_right"></span>
+					</dd>
+				</dl>
+				<dl>
+					<dd>
+						<a href="#">
+							<img src="./images/suede-161101.jpg">
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<h1><span>出</span><span>色</span><span>撞</span><span>位</span></h1>
+							<span>复古的Star Player，一向注重将运动与街头时尚融合。鞋舌的CONS logo等局部运用撞色增添活力感。绒毛内里和鞋垫穿着舒适保暖，迎合冬日需求。鞋面采用反毛皮材质，透气性卓越；弹性橡胶底，防滑耐磨。</span>
+						</a>
+					</dd>
+					<dd>
+						查看更多
+						<span class="line line_top"></span>
+						<span class="line line_bottom"></span>
+						<span class="line line_left"></span>
+						<span class="line line_right"></span>
+					</dd>
+				</dl>
+			</section>
+			<!--区域四结束-->
+				
+			<!--区域五开始-->
+			<section class="main-five">
+				<h1>看看有哪些最新产品故事</h1>
+				<div>
+					<a href="#">ALL STAR</a> 
+					<a href="#">CONS</a> 
+					<a href="#">JACK PURCELL</a> 
+				</div>
+
+				<div>
+					<a href="#">RUBBER TRACKS</a> 
+					<a href="#">CONS PROJECT</a> 
+					<a href="#">FIND JACK</a> 
+				</div>
+
+				<div>
+					<a href="#">音乐</a>
+					<a href="#">DIY</a>
+					<a href="#">街头文化</a>
+					<a href="#">时尚</a>
+					<a href="#">人物</a>
+					<a href="#">活动</a>
+				</div>
+			</section>
+			<!--区域五结束-->
+			
+			<!-- 区域六开始 -->
+			<section class="main-six">
+				
+				<div>
+					<img src="./images/star.png" alt="">
+					<span>至酷精选 玩转潮流</span>
+				</div>
+
+				<dl>
+					<dd>
+						<a href="#">
+							<img src="./images/Jack-Purcell-161101.jpg">
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<h1><span>秋</span><span>冬</span><span>质</span><span>感</span></h1>
+							<span>全新款JACK PURCELL II，采用优质牛皮革作为面料，穿着柔韧透气，不易磨损。鞋边和鞋后跟采用撞色包边设计，带来鲜明层次感。舍弃了鞋头的挡泥板，加上不带金属眼穿孔系带设计，整体显得简约质朴。鞋口优雅的深色弧线如微笑唇形，传递出积极乐观心态。</span>
+						</a>
+					</dd>
+					<dd>
+						<a href="#">查看更多</a>
+					</dd>
+				</dl>
+				<dl>
+					<dd>
+						<a href="#">
+							<img src="./images/Wool-Like-Down-161101.jpg">
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<h1><span>酷</span><span>玩</span><span>拼</span><span>接</span></h1>
+							<span>连帽直筒羽绒服，门襟以内藏的拉链加外部的圆扣闭合，装饰性强的同时又起到挡风作用。前幅两侧各有两个带盖插袋丰富了层次感。领下的菱格纹踩线优雅大方，低调却不单调，丰富了线条与变化感。</span>
+						</a>
+					</dd>
+					<dd>
+						<a href="#">查看更多</a>
+					</dd>
+				</dl>
+
+				<dl>
+					<dd>
+						<a href="#">
+							<img src="./images/chuck2-plus-161101.jpg">
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<h1><span>经</span><span>典</span><span>背</span><span>包</span></h1>
+							<span>
+							增强版Chuck Taylor All Star背包，拥有不同功能的内部口袋和电脑插袋，无论用于出游还是工作学习都能轻松胜任。绚丽多色可选，彰显青春风采。强韧的高密度面料经久耐用。
+							
+							</span>
+						</a>
+					</dd>
+					<dd>
+						<a href="#">查看更多</a>
+					</dd>
+				</dl>
+
+			</section>
+			<!-- 区域六结束 -->
+
+			<!-- 区域七开始 -->
+			<section class="main-seven">
+				<h1>关注CONVERSE</h1>
+				<p>Converse同时活跃在各类社交网络平台，点击下列你所喜爱的常用社交平台，密切关注Converse的最新产品与资讯。</p>
+				<div>
+					<i class="fa fa-weibo fa-4x" aria-hidden="true"></i>
+					<i class="fa fa-tencent-weibo fa-4x" aria-hidden="true"></i>
+					<i class="fa fa-renren fa-4x" aria-hidden="true"></i>
+					<i class="fa fa-weixin fa-4x" aria-hidden="true"></i>
+					<i class="fa fa-qq fa-4x" aria-hidden="true"></i>
+				</div>
+			</section>
+			<!-- 区域七结束 -->
+
+			<!-- 区域八开始 -->
+			<section class="main-eight">
+				<div class="hr"></div>
+
+				<div>
+					<dl>
+						<dt><a href="#">男的</a></dt>
+						<dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+						<dd><a href="#">CONVERSE CONS</a></dd>
+						<dd><a href="#">JACK PURCELL</a></dd>
+						<dd><a href="#">CHUCK II</a></dd>
+						<dd class="dd_one"><a href="#">踩的</a></dd>
+						<dd><a href="#">穿的</a></dd>
+						<dd><a href="#">戴的</a></dd>
+						<dd><a href="#">优惠</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#">女的</a></dt>
+						<dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+						<dd><a href="#">CONVERSE CONS</a></dd>
+						<dd><a href="#">JACK PURCELL</a></dd>
+						<dd><a href="#">CHUCK II</a></dd>
+						<dd class="dd_one"><a href="#">踩的</a></dd>
+						<dd><a href="#">穿的</a></dd>
+						<dd><a href="#">戴的</a></dd>
+						<dd><a href="#">优惠</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#">儿童</a></dt>
+						<dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+						<dd><a href="#">CONVERSE CONS</a></dd>
+						<dd class="dd_one"><a href="#">踩的</a></dd>
+						<dd><a href="#">穿的</a></dd>
+						<dd><a href="#">戴的</a></dd>
+						<dd><a href="#">优惠</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#">电子杂志</a></dt>
+						<dd><a href="#">CHUCK TAYLOR ALL STAR</a></dd>
+						<dd><a href="#">CONVERSE CONS</a></dd>
+						<dd><a href="#">JACK PURCELL</a></dd>
+						<dd class="dd_one"><a href="#">活动</a></dd>
+						<dd><a href="#">音乐</a></dd>
+						<dd><a href="#">DIY</a></dd>
+						<dd><a href="#">街头文化</a></dd>
+						<dd><a href="#">时尚</a></dd>
+						<dd><a href="#">人物</a></dd>
+					</dl>
+				</div>
+
+				<div>
+					<dl>
+						<dt><a href="#">我的账户</a></dt>
+						<dd><a href="#">现有订单</a></dd>
+						<dd><a href="#">过去订单</a></dd>
+						<dd><a href="#">退换货</a></dd>
+						<dd><a href="#">账户设置</a></dd>
+						<dd><a href="#">地址簿</a></dd>
+						<dd><a href="#">我的优惠券</a></dd>
+						<dd><a href="#">我的收藏</a></dd>
+						<dd><a href="#">我的评论</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#">帮助和购物指南</a></dt>
+						<dd><a href="#">账户</a></dd>
+						<dd><a href="#">订单</a></dd>
+						<dd><a href="#">尺码</a></dd>
+						<dd><a href="#">退货和退款</a></dd>
+						<dd><a href="#">换货</a></dd>
+						<dd><a href="#">配送</a></dd>
+						<dd><a href="#">联系我们</a></dd>
+						<dd><a href="#">常见问题</a></dd>
+					</dl>
+					<dl>
+						<dt><a href="#">NIKE</a></dt>
+						<dd><a href="#">NIKE+</a></dd>
+						<dd><a href="#">JORDAN</a></dd>
+					</dl>
+				</div>
+			</section>
+			<!-- 区域八结束 -->
+		</main>
+		<!--主体内容结束-->
+
+		<!--页脚开始-->
+		<footer>
+			<ul>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">帮助和购物指南</a></li>
+				<li><a href="#">法律声明</a></li>
+				<li><a href="#">使用规则</a></li>
+			</ul>
+
+			<div><a href="#"></a></div>
+
+			<p>&copy;匡威体育用品（中国）有限公司 保留所有权利    沪ICP备11044134号-2</p>
+		</footer>
+		<!--页脚结束-->
+	<!--外部容器结束-->
+	
+	<!-- 回到顶部按钮 -->
+	<div id="back_top">回到顶部</div>
+
+	<!-- form表单分离 -->
+	<form action="./1.php" method="get" id="reg"></form>
+
+	</div>
+		
+
+	
+</body>
+</html>

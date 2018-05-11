@@ -1,0 +1,155 @@
+/* 帮助区域 */
+main{
+	margin-top: 160px;
+}
+#container>main>section.main-help>p{
+	width:100%;
+	text-align: center;
+	font-size:16px;
+}
+/*#one>p{
+	font-size: 16px;
+}*/
+#container{
+	/*background: pink;*/
+}
+
+#container>main>section.main-help>ul{
+	width:80%;
+	/*background: green;*/
+	margin:5% auto 0;
+	box-sizing: border-box;
+	max-height: 80%;
+	text-align: center;
+}
+#container>main>section.main-help>ul:nth-of-type(2){
+	margin-top: 2%;
+}
+#container>main>section.main-help>ul>li{
+	width:23%;
+	margin-right: 2%;
+	height: 108px;
+	display: inline-block;
+	outline: 1px solid #999;
+	cursor: pointer;
+}
+#container>main>section.main-help>ul>li:last-child{
+	margin-right: 0;
+}
+#container>main>section.main-help>ul>li>a>i{
+	background-image: url(../images/help-guide-sprites.png);
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    display: block;
+    clear: both;
+    background-repeat: no-repeat;
+    margin: 10px auto 13px;
+}
+#container>main>section.main-help>ul>li>a{
+	color:#333;
+}
+#container>main>section.main-help>ul:first-of-type>li:nth-child(2)>a>i{
+	background-position: 5px -49px;
+}
+#container>main>section.main-help>ul:first-of-type>li:nth-child(3)>a>i{
+	background-position: 5px -95px;
+}
+#container>main>section.main-help>ul:first-of-type>li:nth-child(4)>a>i{
+	width:58px;
+	background-position: 0px -149px;
+}
+#container>main>section.main-help>ul:nth-of-type(2)>li:nth-child(1)>a>i{
+	background-position: 3px -196px;
+}
+#container>main>section.main-help>ul:nth-of-type(2)>li:nth-child(2)>a>i{
+	background-position: 0px -243px;
+}
+#container>main>section.main-help>ul:nth-of-type(2)>li:nth-child(3)>a>i{
+	width:58px;
+	background-position:0px -300px;
+}
+#container>main>section.main-help>ul:nth-of-type(2)>li:nth-child(4)>a>i{
+	background-position: 0px -347px;
+}
+
+#container>main>section.main-help>ul:first-of-type>li:first-child:hover>a>i{
+	background-position: -70px 0px;
+}
+#container>main>section.main-help>ul>li:hover{
+	background-color: #999;
+	opacity: .6;
+	filter: alpha(opacity:60);
+	transition: .8s;
+	-webkit-transition: .8s;
+	-moz-transition: .8s;
+	-ms-transition: .8s;
+	-o-transition: .8s;
+}
+#container>main>section.main-help>ul:first-of-type>li:nth-child(2):hover>a>i{
+	background-position: -67px -49px;
+}
+#container>main>section.main-help>ul:first-of-type>li:nth-child(3):hover>a>i{
+	background-position: -67px -95px;
+}
+#container>main>section.main-help>ul:first-of-type>li:nth-child(4):hover>a>i{
+	background-position: -67px -149px;
+}
+#container>main>section.main-help>ul:nth-of-type(2)>li:nth-child(1):hover>a>i{
+	background-position: -67px -196px;
+}
+#container>main>section.main-help>ul:nth-of-type(2)>li:nth-child(2):hover>a>i{
+	background-position: -67px -243px;
+}
+#container>main>section.main-help>ul:nth-of-type(2)>li:nth-child(3):hover>a>i{
+	background-position:-67px -300px;
+}
+#container>main>section.main-help>ul:nth-of-type(2)>li:nth-child(4):hover>a>i{
+	background-position: -67px -347px;
+}
+#container>main>section.main-help>button{
+	border: none;
+	outline: none;
+	display: block;
+	width: 30%;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    line-height: 38px;
+    text-align: center;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px #111;
+    cursor: pointer;
+    margin:0 auto;
+    margin-top: 6%;
+    font-family: "Microsoft YaHei",Arial;
+}
+#container>main>section.main-help>button:after{
+	background: url(../images/sprites_header_footer.png) no-repeat -10px -164px;
+    width: 15px;
+    height: 28px;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    margin-left: 12px;
+    content: "";
+}
+#container>main>section.main-help>button:hover{
+	transition:background-color linear .2s;
+	-webkit-transition:background-color linear .2s;
+	-moz-transition:background-color linear .2s;   
+	-o-transition:background-color linear .2s;     
+	-ms-transition:background-color linear .2s;    
+	background-color:#fff;
+	color:#000;
+}
+#container>main>section.main-help>button:hover:after{
+	transition:background-position linear .2s;
+	-webkit-transition:background-position linear .2s;
+	-moz-transition:background-position linear .2s;   
+	-o-transition:background-position linear .2s;     
+	-ms-transition:background-position linear .2s;
+	background-position: -43px -164px;
+}
